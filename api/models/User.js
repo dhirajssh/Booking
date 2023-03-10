@@ -10,5 +10,17 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true
+  },
+  passwords: {
+    type: String,
+    required: true,
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false
   }
+}, {
+  timestamps: true
 })
+
+export default UserSchema;
