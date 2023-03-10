@@ -29,7 +29,7 @@ app.use("/api/users", authRoute)
 app.use("/api/hotels", hotelsRoute)
 app.use("/api/rooms", authRoute)
 
-app.use((err, res,req, next) => {
+app.use((err, req ,res, next) => {
   const errorStatus = err.status || 500;
   const errorMessage = err.message || "Something went wrong!"
   
